@@ -101,7 +101,9 @@ sub { bottom: -0.25em; }
 
 ul, ol { margin: 1em 0; padding: 0 0 0 40px; }
 dd { margin: 0 0 0 40px; }
-nav ul, nav ol { list-style: none; list-style-image: none; margin: 0; padding: 0; }
+nav ul, nav ol,
+ul.structural, ol.structural{ list-style: none; list-style-image: none; margin: 0; padding: 0; }
+
 
 
 /* =============================================================================
@@ -259,6 +261,60 @@ p a, p span, a span{font-size:1em;} /* embedded elements reset */
 .footer /*footer*/ a, .footer /*footer*/ span{display:inline-block; white-space:nowrap;
 	text-decoration:none;color:#403f35;font-family:Verdana, Arial, Helvetica, sans-serif;}
 .footer /*footer*/ small{margin:0 4px 0 5px;}
+
+
+/*	CSS3 BORDER RADIUS, BOX SHADOW
+	=========================================== */
+	
+/* round them corners! ;)*/
+.rounded{
+     -moz-border-radius: 4px; /* FF1+ */
+  -webkit-border-radius: 4px; /* Saf3-4, iOS 1+, Android 1.5+ */
+          border-radius: 4px; /* Opera 10.5, IE9, Saf5, Chrome, FF4 */
+}
+.roundedTop{	/* top corners */		
+     -moz-border-radius: 4px 4px 0 0;
+  -webkit-border-radius: 4px 4px 0 0;
+          border-radius: 4px 4px 0 0;
+}
+.roundedRight{			/* right corners */
+     -moz-border-radius: 0 4px 4px 0;
+  -webkit-border-radius: 0 4px 4px 0;
+          border-radius: 0 4px 4px 0;
+}
+.roundedBottom{	/* bottom corners */		
+     -moz-border-radius: 0 0 4px 4px;
+  -webkit-border-radius: 0 0 4px 4px;
+          border-radius: 0 0 4px 4px;
+}
+.roundedLeft{				/* left corners */
+     -moz-border-radius: 4px 0 0 4px;
+  -webkit-border-radius: 4px 0 0 4px;
+          border-radius: 4px 0 0 4px;
+}
+
+/* drop them shadows! ;)*/
+.dropShadow{
+		-moz-box-shadow: #BBB 0px 2px 2px;
+	 -webkit-box-shadow: #BBB 0px 2px 2px;
+			 box-shadow: #BBB 0px 2px 2px;
+}
+/* apply .htc */
+.rounded,
+.roundedTop,
+.roundedRight,
+.roundedBottom,
+.roundedLeft,
+.dropShadow
+{
+	position:relative;
+	behavior:url(/js/plugins/PIE.htc);
+}
+
+/* test it with sample content */
+.testBox-css3pie{width:250px;background:#f88e13;text-align:center;float:left;display:inline;margin:0 10px 1em 0;}
+.testBox-css3pie p{padding:3.5em 0;}
+.testBox-css3pie em{font-weight:bold;}
 
 
 
