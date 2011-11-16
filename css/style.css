@@ -101,9 +101,7 @@ sub { bottom: -0.25em; }
 
 ul, ol { margin: 1em 0; padding: 0 0 0 40px; }
 dd { margin: 0 0 0 40px; }
-nav ul, nav ol,
-ul.structural, ol.structural{ list-style: none; list-style-image: none; margin: 0; padding: 0; }
-
+nav ul, nav ol{ list-style: none; list-style-image: none; margin: 0; padding: 0; }
 
 
 /* =============================================================================
@@ -208,6 +206,13 @@ td { vertical-align: top; }
    Author: Aron Lakatos / @aronlakatos
    ========================================================================== */
 
+/* =============================================================================
+   STRUCTURAL RESETS
+   ========================================================================== */
+blockquote.structural { margin: 0; }
+ul.structural, ol.structural{ list-style: none; list-style-image: none; margin: 0; padding: 0; }
+
+   
 /* =============================================================================
    RELATIVE FONT SIZING PRESETS
    ========================================================================== */
@@ -316,6 +321,252 @@ p a, p span, a span{font-size:1em;} /* embedded elements reset */
 .testBox-css3pie p{padding:3.5em 0;}
 .testBox-css3pie em{font-weight:bold;}
 
+
+/* 	JQuery Scrollable Styles - START
+	======================================== */
+.wrapperScrollable {overflow:hidden;margin:0 0 5em;}
+.wrapperScrollable, .wrapperScrollable .scrollable{width:738px;height:281px;}
+.wsWide, .wsWide .scrollable{width:958px;height:281px;}
+
+.scrollable {position:relative;overflow-y:scroll;overflow-x:hidden;background:#B1B1B1;} 
+.jsEnabled .scrollable {overflow:hidden;}
+
+.scrollable .items {float:left;overflow:hidden;}
+.jsEnabled .scrollable .items {width:20000em;position:absolute;overflow:visible;}
+
+
+.wrapperScrollable .items div {float:left;position:relative;}
+/* vertical layout -> */ .verticalPreset .items div{clear:both;}
+.wrapperScrollable .items img{display:block;}
+
+.naviWrapper{display:none;position:absolute;bottom:0;right:0;}
+.naviWrapper .inner{padding:4px 19px 3px 22px;background:#fff;float:left;}
+
+.jsEnabled .naviWrapper{display:block;z-index:10;}
+
+.naviWrapper .browse{background:#ddd;display:inline;
+		float:left;font-size:1px;width:12px;height:12px;margin:0 4px;cursor:pointer;}
+.naviWrapper .right{background-position:0 0;}
+.naviWrapper .right:hover{background-position:0 0;}
+.naviWrapper .left:hover{background-position:0 0;}
+		
+.wrapperScrollable .navi {bottom:0;right:0;position:static;float:left;width:auto;height:13px;}
+.wrapperScrollable .navi a {width:12px;height:12px;float:left;margin:0 4px;cursor:pointer;
+	background:#8cc4ff;display:inline;font-size:1px;}
+.wrapperScrollable .navi a:hover {background:#1587fe;}
+.wrapperScrollable .navi a.active {background:#1587fe;}
+
+/* navigator vertical layout - START */
+.verticalPreset .naviWrapper .inner{padding:22px 1px 19px 1px;}
+.verticalPreset .navi{height:auto;clear:both;}
+.verticalPreset .navi a{float:none;display:block;margin:6px 4px 5px;}
+.verticalPreset .naviWrapper .browse{clear:both;margin:2px 4px 1px;}
+/* navigator vertical layout - END */
+
+/* fadeOver styles - START */
+.fadeOver .items{left:0 !important;top:0 !important;}
+.fadeOver .items .prevActive{position:absolute;top:0;left:0;z-index:9;}
+.fadeOver .items .active{position:absolute;top:0;left:0;z-index:10;}
+/* fadeOver styles - END */
+		
+.hidden, .jsEnabled .jsHidden{position:absolute;left:-999em;}
+.wrapperScrollable a:focus {outline: none;}
+
+/* navigator theme (Casio Products Vertical) - START */
+.casioProductsV{bottom:0;top:72px;}
+.casioProductsV .inner{border:1px solid #b4b4b4;border-right:0;padding:4px 0 !important;}
+.casioProductsV .navi{border-top:1px solid #b4b4b4;border-bottom:1px solid #b4b4b4;padding:5px 0 8px;
+	clear:both;height:auto;}
+.casioProductsV .browse{clear:both;}
+.casioProductsV .navi a,
+.casioProductsV .prev,
+.casioProductsV .next{padding:6px 4px 2px 5px !important; margin:0 !important;
+	background: transparent url(/i/sprite_scrollable.png) !important;}
+
+.casioProductsV .navi a{float:left;clear:both;display:inline;
+	background-position:-123px -11px !important;}
+.casioProductsV .prev{padding-bottom:5px !important;padding-top:0 !important;
+	background-position:-143px -14px !important;}
+.casioProductsV .next{padding-top:5px !important;padding-bottom:0 !important;
+	background-position:-163px -10px !important;}
+	
+.casioProductsV .navi a:hover,
+.casioProductsV .navi a.active{background-position:-123px -31px !important;}	
+.casioProductsV .prev:hover{background-position:-143px -34px !important;}
+.casioProductsV .next:hover{background-position:-163px -30px !important;}
+
+.casioProductsV .inner{				/* lefty */
+     -moz-border-radius: 8px 0 0 8px;
+  -webkit-border-radius: 8px 0 0 8px;
+          border-radius: 8px 0 0 8px;		  
+}
+
+/* navigator theme (Casio Products Vertical) - END */
+
+/* navigator theme (Casio Products Horizontal) - START */
+.casioProductsH{right:12px;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  filter: alpha(opacity=50);
+  -moz-opacity: 0.5;
+  -khtml-opacity: 0.5;
+  opacity: 0.5;
+}
+.casioProductsH .inner{border:1px solid #b4b4b4;border-bottom:0;padding:0 4px !important;}
+.casioProductsH .navi{border-left:1px solid #b4b4b4;border-right:1px solid #b4b4b4;padding:0 7px 0 6px;
+	clear:none !important;height:auto;}
+.casioProductsH .browse{clear:none !important;}
+.casioProductsH .navi a,
+.casioProductsH .prev,
+.casioProductsH .next{padding:5px 4px 4px 4px !important; margin:0 !important;
+	background: transparent url(/i/sprite_scrollable.png) !important;}
+
+.casioProductsH .navi a{float:left;display:inline;
+	background-position:-123px -11px !important;}
+.casioProductsH .prev{padding-left:5px !important;padding-right:1px !important;
+	background-position:-187px -10px !important;}
+.casioProductsH .next{padding-right:5px !important;padding-left:1px !important;
+	background-position:-203px -10px !important;}
+	
+.casioProductsH .navi a:hover,
+.casioProductsH .navi a.active{background-position:-123px -51px !important;}	
+.casioProductsH .prev:hover{background-position:-187px -50px !important;}
+.casioProductsH .next:hover{background-position:-203px -50px !important;}
+
+.casioProductsH .inner{				/* top */
+     -moz-border-radius: 8px 8px 0 0;
+  -webkit-border-radius: 8px 8px 0 0;
+          border-radius: 8px 8px 0 0;		  
+}
+/* navigator theme (Casio Products Horizontal) - END */
+
+/* navigator theme (default tabbed navigator) - START */
+.defaultTabbed{bottom:0;top:0;}
+.defaultTabbed .inner{border:0 none;border-left:1px solid #d7d7d7;padding:0 !important;height:248px;
+	overflow:visible !important;background:transparent !important;}
+.defaultTabbed .navi{border:0 none;padding:0;clear:both;height:auto;}
+
+.naviWrapper .tBrowse{background:#ddd;display:inline;
+		float:left;font-size:1px;width:12px;height:12px;margin:0 4px;cursor:pointer;clear:both;}
+.defaultTabbed .navi a,
+.defaultTabbed .tPrev,
+.defaultTabbed .tNext{padding:0 !important; margin:0 !important;
+	background: transparent url(/i/sprite_scrollable.png) !important;}
+
+.defaultTabbed .navi a{float:left;clear:both;display:inline;width:auto;height:auto;
+	background-position:-123px -11px !important;border-bottom:1px solid #d7d7d7;}
+.defaultTabbed .tPrev,
+.defaultTabbed .tNext{padding:4px 4px 4px 5px !important;position:absolute;z-index:100;
+	border:1px solid #b4b4b4;border-right:0 none;}
+.defaultTabbed .tPrev{
+	background-position:-143px -12px !important;top:0;right:0;border-top:0 none;
+     -moz-border-radius: 0 0 0 5px;
+  -webkit-border-radius: 0 0 0 5px;
+          border-radius: 0 0 0 5px;		  
+	}
+.defaultTabbed .tNext{
+	background-position:-163px -10px !important;bottom:0;right:0;border-bottom:0 none;
+     -moz-border-radius: 5px 0 0 0;
+  -webkit-border-radius: 5px 0 0 0;
+          border-radius: 5px 0 0 0;		  
+	}
+	
+.defaultTabbed .navi a:hover,
+.defaultTabbed .navi a.active{background-position:-123px -31px !important;}	
+.defaultTabbed .tPrev:hover{background-position:-143px -32px !important;}
+.defaultTabbed .tNext:hover{background-position:-163px -30px !important;}
+
+.defaultTabbed .inner{				/* reset */
+     -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+          border-radius: 0;		  
+}
+
+.defaultTabbed .naviCloned{
+    bottom: 0;
+    right: 0;	
+    float: left;
+    clear: both;	
+    position: static;
+    width: auto;
+    height: auto;
+    border: 0 none;
+    padding: 0;	
+}
+
+/*.naviPointer{height:82px;width:5px;background:#ff0000;position:absolute;left:-6px;top:0;}*/
+.defaultTabbed .naviWrapper,
+.defaultTabbed .inner{
+	width:179px;
+	height:248px;
+}
+.defaultTabbed .navi{position:absolute;top:0; }
+.defaultTabbed .navi a{opacity: 0.5;}
+.defaultTabbed .navi .active{/*border-left:5px solid #fff;*/ opacity: 1;}
+
+/* DEBUG
+.wrapperScrollable, .scrollable{overflow:visible !important;}*/
+
+/* navigator theme (default tabbed navigator) - END */
+
+.naviWrapper .inner{
+	position:relative;
+	behavior:url(/js/plugins/PIE.htc);	  
+}
+
+/* navigator theme (HE GLOBAL Vertical) - START */
+.HE_GlobalV{bottom:0;top:0;height:100%;border:0;border-left:1px solid #66300d;}
+.HE_GlobalV .inner{padding:0 6px 0 5px !important;position:static;height:100%;background:transparent url(/i/bgCarouselNavi.png) repeat-x;}
+.HE_GlobalV .navi{padding:5px 0 8px;clear:both;height:auto;position:relative;}
+.HE_GlobalV .tBrowse{height:20px;}
+.HE_GlobalV .browse{clear:both;}
+.HE_GlobalV .navi a,
+.HE_GlobalV .prev,
+.HE_GlobalV .next{padding:2px 4px 0 5px !important; margin:0 !important;
+	background: transparent url(/i/sprite_scrollable.png) !important;}
+
+.HE_GlobalV .navi a{float:left;clear:both;display:inline;
+	background-position:-123px -11px !important;}
+.HE_GlobalV .prev{padding-bottom:5px !important;padding-top:0 !important;
+	background-position:-143px -14px !important;
+	position:absolute;top:5px;left:5px;}
+.HE_GlobalV .next{padding-top:5px !important;padding-bottom:0 !important;
+	background-position:-163px -10px !important;
+	position:absolute;bottom:8px;right:5px;}	
+.HE_GlobalV .navi a:hover,
+.HE_GlobalV .navi a.active{background-position:-123px -51px !important;}	
+.HE_GlobalV .prev:hover{background-position:-143px -54px !important;}
+.HE_GlobalV .next:hover{background-position:-163px -50px !important;}
+
+.HE_GlobalV .inner{				/* righty */
+     -moz-border-radius: 0 4px 4px 0;
+  -webkit-border-radius: 0 4px 4px 0;
+          border-radius: 0 4px 4px 0;		  
+}
+.slideContent{				/* lefty */
+     -moz-border-radius: 4px 0 0 4px;
+  -webkit-border-radius: 4px 0 0 4px;
+          border-radius: 4px 0 0 4px;		  
+}
+#carousel{
+     -moz-border-radius: 5px 5px 5px 5px;
+  -webkit-border-radius: 5px 5px 5px 5px;
+          border-radius: 5px 5px 5px 5px;		  
+}
+/* navigator theme (HE GLOBAL Vertical) - END */
+
+/* CUSTOM STYLES for HE GLOBAL */
+#carousel{border:1px solid #3f1f0b;}
+.slideContent{background:url(/i/bgCarouselNavi.png) repeat-x;position:absolute !important;
+	left:0;top:0;z-index:10;padding:18px 26px 18px 27px;;width:277px;height:245px;border-right:1px solid #66300d;
+	display:block;font-size:1em !important;cursor:pointer;}
+.slideContent h2{color:#000;margin:0.15em 0 0.7em;font-weight:normal;font-size:2.8em;line-height:1}
+.slideContent p{font-size:1.3em;}	
+.slideContent a{color:#fff;text-decoration:none;}
+.slideContent span{color:#04ff0a;display:block;margin:1em 0 0;padding:0 0 0 14px;
+	font-size:1.076923em;line-height:1;background:url(/i/sprite_scrollable.png) -250px -12px;
+}
+/* 	JQuery Scrollable Styles - END
+	======================================== */
 
 
 /* ==|== non-semantic helper classes ========================================
