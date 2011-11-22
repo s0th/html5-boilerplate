@@ -644,6 +644,8 @@ button.variantRight{padding-right:26px;}
 .variantRight small{width:27px;height:27px;position:absolute;top:-1px;}
 a.variantLeft small,
 a.variantRight small{top:-1px;}	
+.msie7 button.variantLeft small,
+.msie7 button.variantRight small{top:-2px;}	
 
 /* left variant custom styles / firefox fixes */
 .variantLeft small{display:none;}
@@ -772,6 +774,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f3f3f3', endC
 .themeGray:hover{color:#204b8b;}
 
 .roundedBtn{
+background: #4D6FA2;
 background-image: linear-gradient(bottom, rgb(36,80,141) 0%, rgb(77,111,162) 100%);
 background-image: -o-linear-gradient(bottom, rgb(36,80,141) 0%, rgb(77,111,162) 100%);
 background-image: -moz-linear-gradient(bottom, rgb(36,80,141) 0%, rgb(77,111,162) 100%);
@@ -787,6 +790,7 @@ background-image: -webkit-gradient(
 );
 }
 .roundedBtn:hover{
+background: #3E4F68;
 background-image: linear-gradient(bottom, rgb(19,39,70) 0%, rgb(62,79,104) 100%);
 background-image: -o-linear-gradient(bottom, rgb(19,39,70) 0%, rgb(62,79,104) 100%);
 background-image: -moz-linear-gradient(bottom, rgb(19,39,70) 0%, rgb(62,79,104) 100%);
