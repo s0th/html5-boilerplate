@@ -211,7 +211,7 @@ td { vertical-align: top; }
    ========================================================================== */
 blockquote.structural { margin: 0; }
 ul.structural, ol.structural{ list-style: none; list-style-image: none; margin: 0; padding: 0; }
-
+dl.structural, dl.structural dd{ margin: 0; }
    
 /* =============================================================================
    RELATIVE FONT SIZING PRESETS
@@ -381,7 +381,7 @@ p a, p span, a span{font-size:1em;} /* embedded elements reset */
 .casioProductsV .navi a,
 .casioProductsV .prev,
 .casioProductsV .next{padding:6px 4px 2px 5px !important; margin:0 !important;
-	background: transparent url(../i/spriteScrollable.png) !important;}
+	background: transparent url(../img/spriteScrollable.png) !important;}
 
 .casioProductsV .navi a{float:left;clear:both;display:inline;
 	background-position:-123px -11px !important;}
@@ -418,7 +418,7 @@ p a, p span, a span{font-size:1em;} /* embedded elements reset */
 .casioProductsH .navi a,
 .casioProductsH .prev,
 .casioProductsH .next{padding:5px 4px 4px 4px !important; margin:0 !important;
-	background: transparent url(../i/spriteScrollable.png) !important;}
+	background: transparent url(../img/spriteScrollable.png) !important;}
 
 .casioProductsH .navi a{float:left;display:inline;
 	background-position:-123px -11px !important;}
@@ -450,7 +450,7 @@ p a, p span, a span{font-size:1em;} /* embedded elements reset */
 .defaultTabbed .navi a,
 .defaultTabbed .tPrev,
 .defaultTabbed .tNext{padding:0 !important; margin:0 !important;
-	background: transparent url(../i/spriteScrollable.png) !important;}
+	background: transparent url(../img/spriteScrollable.png) !important;}
 
 .defaultTabbed .navi a{float:left;clear:both;display:inline;width:auto;height:auto;
 	background-position:-123px -11px !important;border-bottom:1px solid #d7d7d7;}
@@ -515,14 +515,14 @@ p a, p span, a span{font-size:1em;} /* embedded elements reset */
 
 /* navigator theme (HE GLOBAL Vertical) - START */
 .HE_GlobalV{bottom:0;top:0;height:100%;border:0;border-left:1px solid #66300d;}
-.HE_GlobalV .inner{padding:0 6px 0 5px !important;position:static;height:100%;background:transparent url(../i/bgCarouselNavi.png) repeat-x;}
+.HE_GlobalV .inner{padding:0 6px 0 5px !important;position:static;height:100%;background:transparent url(../img/bgCarouselNavi.png) repeat-x;}
 .HE_GlobalV .navi{padding:5px 0 8px;clear:both;height:auto;position:relative;}
 .HE_GlobalV .tBrowse{height:20px;}
 .HE_GlobalV .browse{clear:both;}
 .HE_GlobalV .navi a,
 .HE_GlobalV .prev,
 .HE_GlobalV .next{padding:2px 4px 0 5px !important; margin:0 !important;
-	background: transparent url(../i/spriteScrollable.png) !important;}
+	background: transparent url(../img/spriteScrollable.png) !important;}
 
 .HE_GlobalV .navi a{float:left;clear:both;display:inline;
 	background-position:-123px -11px !important;}
@@ -556,14 +556,14 @@ p a, p span, a span{font-size:1em;} /* embedded elements reset */
 
 /* CUSTOM STYLES for HE GLOBAL */
 #carousel{border:1px solid #3f1f0b;}
-.slideContent{background:url(../i/bgCarouselNavi.png) repeat-x;position:absolute !important;
+.slideContent{background:url(../img/bgCarouselNavi.png) repeat-x;position:absolute !important;
 	left:0;top:0;z-index:10;padding:18px 26px 18px 27px;;width:277px;height:245px;border-right:1px solid #66300d;
 	display:block;font-size:1em !important;cursor:pointer;}
 .slideContent h2{color:#000;margin:0.15em 0 0.7em;font-weight:normal;font-size:2.8em;line-height:1}
 .slideContent p{font-size:1.3em;}	
 .slideContent a{color:#fff;text-decoration:none;}
 .slideContent span{color:#04ff0a;display:block;margin:1em 0 0;padding:0 0 0 14px;
-	font-size:1.076923em;line-height:1;background:url(../i/spriteScrollable.png) -250px -12px;
+	font-size:1.076923em;line-height:1;background:url(../img/spriteScrollable.png) -250px -12px;
 }
 /* 	JQuery Scrollable Styles - END
 	======================================== */
@@ -590,12 +590,27 @@ p a, p span, a span{font-size:1em;} /* embedded elements reset */
 .invisible { visibility: hidden; }
 
 /* Contain floats: h5bp.com/q */ 
-.clearfix:before, .clearfix:after,
-.group:before, .group:after { content: ""; display: table; }
-.clearfix:after,
-.group:after{ clear: both; }
+.clearfix:before, .clearfix:after, .group:before, .group:after , 
+.header:before, .header:after, .footer:before, .footer:after, 
+.article:before, .article:after, .section:before, .section:after, .nav:before, .nav:after,
+.structural:before, .structural:after
+{ content: ""; display: table; }
+
+.clearfix:after, .group:after,
+.header:after, .footer:after,
+.article:after, .section:after, .nav:after,
+.structural:after
+{ clear: both; }
+
 .clearfix,
-.group { zoom: 1; }
+.group,
+.header,
+.footer,
+.article,
+.section,
+.nav,
+.structural
+{ zoom: 1; }
 
 /* Basic floating and clearing classes */
 .floatLeft{float:left;}
